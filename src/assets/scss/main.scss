@@ -1,0 +1,34 @@
+$blue-lightest: rgba(118,136,169,1);
+$blue-lighter: rgba( 77,100,141,1);
+$blue: rgba( 45, 69,113,1);
+$blue-darker: rgba( 21, 44, 85,1);
+$blue-darkest: rgba(  5, 24, 56,1);
+$green: rgb(19, 107, 78);
+$red: rgb(170, 46, 46);
+$yellow: rgb(214, 179, 61);
+
+* {
+    font-family: arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  a {
+      text-decoration: none;
+  }
+  
+:export {
+    lightestBlue: $blue-lightest;
+    lighterBlue: $blue-lighter;
+    blue: $blue;
+    darkestBlue: $blue-darkest;
+    green: $green;
+    red: $red;
+    yellow: $yellow;
+}
