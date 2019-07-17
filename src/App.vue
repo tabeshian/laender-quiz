@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <router-link to="/" class="title">Länderquiz</router-link> -->
     <router-view />
   </div>
 </template>
