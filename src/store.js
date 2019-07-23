@@ -19,6 +19,9 @@ export default new Vuex.Store({
   getters: {
     currentCountry(state) {
       return state.randomCountries[state.round]
+    },
+    score(state) {
+      return state.score
     }
   },
   mutations: {

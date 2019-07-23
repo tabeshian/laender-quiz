@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="map-wrapper">
     <l-map id="map" ref="map" :zoom="zoom" :center="center" :options="options">
       <l-geo-json
         ref="countries"
@@ -34,8 +34,8 @@ export default {
       options: {
         minZoom: 2,
         maxZoom: 6,
-        doubleClickZoom: false,
-        zoomControl: false
+        doubleClickZoom: false
+        // zoomControl: false
       },
       geojsonOptions: {
         style: () => this.resetStyle()
@@ -52,9 +52,9 @@ export default {
     resetStyle() {
       return {
         weight: 1,
-        color: colors.yellow,
-        fillColor: colors.lighterBlue,
-        fillOpacity: 0.75
+        color: colors.white,
+        fillColor: colors.black,
+        fillOpacity: 0.9
       };
     },
     // on polygon click
@@ -88,20 +88,21 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/main.scss";
+
 #map {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background: $blue-darkest;
+  height: 100%;
+  width: 100%;
+  background: $lightgrey;
   .leaflet-control-attribution {
-    background: inherit;
+    display: none;
     a {
       font-size: 1rem;
-      color: $yellow;
+      color: $white;
+      text-decoration: none;
     }
   }
   .leaflet-interactive {
-    opacity: 0.8;
+    opacity: 0.9;
     transition: opacity 0.3s ease-in-out;
     &:hover,
     &:focus {
