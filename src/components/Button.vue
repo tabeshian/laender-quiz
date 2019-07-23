@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import { TweenLite } from "gsap";
 import { mapState } from "vuex";
 export default {
   mounted() {},
